@@ -1,44 +1,62 @@
-# Window Activity Tracker
-Introduction
+Window Activity Tracker
 
-The Window Activity Tracker is a powerful Python application designed to monitor and log the duration of active windows in a user's graphical environment, specifically targeting development environments like Visual Studio Code. This tool is particularly useful for developers and analysts who want to track time spent on different projects or files, offering insights that can help optimize productivity and project planning.
+Welcome to the GitHub repository of the Window Activity Tracker! This tool is designed to help developers, analysts, and any professionals who spend considerable time on their computers, especially those using Linux systems, to monitor and log the duration of their active windows. Particularly beneficial for users of Visual Studio Code, this application extends its functionality to various other development environments by tracking active window durations to facilitate productivity analysis and project time management.
+Project Background and Rationale
 
-Built using Python and the EWMH (Extended Window Manager Hints) library, this application taps into the X Window System to fetch active window data, making it suitable only for Linux systems with X11. The project leverages SQLite for local data storage, ensuring all activity data is stored efficiently and can be queried for reporting and analysis purposes.
-Key Features
+In today's fast-paced digital world, managing time efficiently is crucial, especially for developers and data analysts who juggle multiple projects. The idea for the Window Activity Tracker emerged from the need to quantitatively assess time spent on various projects without interrupting the flow of work. Built with Python and integrating the EWMH (Extended Window Manager Hints) library, this application utilizes the capabilities of the X Window System to fetch and log active window data, providing insights that are pivotal for enhancing productivity and optimizing project planning.
 
-    Activity Tracking: Monitors active windows and logs duration spent on each window that matches specified criteria (e.g., windows titled "Visual Studio Code").
-    Data Persistence: Utilizes SQLite database to store activity logs, providing robust data handling and easy retrieval.
-    Real-time Monitoring: Runs in the background, updating the activity database in real-time as window focus changes.
-    Extensibility: Easily extendable to support more editors or development environments beyond Visual Studio Code.
+Why Python? The choice of Python for this project stems from its extensive library ecosystem and its robustness in handling backend operations like database interactions. Python's simplicity and readability make it a perfect fit for projects that involve real-time data processing and storage, such as this activity tracker.
+Core Features
+
+    Activity Tracking: The primary feature of this tool is its ability to monitor and log the duration for which windows remain active. It's specifically fine-tuned to identify and record sessions from development environments like Visual Studio Code.
+
+    Data Persistence: Leveraging SQLite for local data storage ensures that all tracking data is stored securely and efficiently. SQLite provides a lightweight yet robust framework for local database solutions, which perfectly aligns with the need for a minimalistic yet effective storage mechanism for our tracker.
+
+    Real-time Monitoring: Running quietly in the background, the tracker updates the activity logs in real-time as the window focus changes. This feature allows users to maintain an uninterrupted workflow with the assurance that all data is being logged accurately.
+
+    Extensibility: While initially designed for Visual Studio Code, the architecture of the Window Activity Tracker allows for easy extensions to include other editors and development environments, demonstrating the application's versatile nature.
 
 Installation
 Prerequisites
 
-    Linux OS with X11 display server
-    Python 3.6 or higher
-    SQLite3
+    Linux OS with X11 display server.
+    Python 3.6 or higher.
+    SQLite3.
 
-Setup Environment
+Getting Started
 
 Clone the repository and set up a Python virtual environment:
-    git clone https://github.com/jaryddml/CodingTracker.git
-    cd window-activity-tracker
-    python -m venv venv
-    source venv/bin/activate
+
+bash
+
+git clone https://github.com/jaryddml/CodingTracker.git
+cd window-activity-tracker
+python -m venv venv
+source venv/bin/activate
 
 Install Dependencies
 
-Install the required Python packages:
-    pip install -r requirements.txt
+Install the necessary Python packages using:
+
+bash
+
+pip install -r requirements.txt
 
 Usage
 
-To start the activity tracker, run the main script:
-    python project.py
+To initiate the tracking service, run:
 
-This will initiate the tracking service, which will run silently in the background. To view the activity logs, you can start the gui:
-    python gui.py
+bash
 
-The gui gets the data from the database and displays your individual files with the total amount of time spent in each one.
-Using sqlite and using minimal minumal recourses this is a very lightweight program that you will not notice.
-I Have been running it with no crashes and no adverse effects. 
+python project.py
+
+This command starts the tracking service, which operates in the background. For viewing the logs and analyzing the data, launch the GUI with:
+
+bash
+
+python gui.py
+
+The GUI fetches data from the SQLite database and displays individual file records with the total amount of time spent, offering a user-friendly interface for data interaction.
+Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated. If you have a suggestion that would make this better, please fork the repo and create a pull-up request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!

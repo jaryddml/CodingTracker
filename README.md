@@ -1,3 +1,4 @@
+
 Window Activity Tracker
 
 Welcome to the GitHub repository of the Window Activity Tracker! This tool is designed to help developers, analysts, and any professionals who spend considerable time on their computers, especially those using Linux systems, to monitor and log the duration of their active windows. Particularly beneficial for users of Visual Studio Code, this application extends its functionality to various other development environments by tracking active window durations to facilitate productivity analysis and project time management.
@@ -55,6 +56,10 @@ This command starts the tracking service, which operates in the background. For 
 bash
 
     python gui.py
+
+
+
+![gui](https://github.com/jaryddml/CodingTracker/assets/109385281/cc70bb6e-3923-4595-8abc-5db39fd50118)    
 
 The GUI fetches data from the SQLite database and displays individual file records with the total amount of time spent, offering a user-friendly interface for data interaction.
 Contributing

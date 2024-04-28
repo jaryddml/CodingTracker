@@ -21,23 +21,23 @@ Prerequisites
 Setup Environment
 
 Clone the repository and set up a Python virtual environment:
-git clone https://github.com/jaryddml/CodingTracker.git
-cd window-activity-tracker
-python -m venv venv
-source venv/bin/activate
+    git clone https://github.com/jaryddml/CodingTracker.git
+    cd window-activity-tracker
+    python -m venv venv
+    source venv/bin/activate
 
 Install Dependencies
 
 Install the required Python packages:
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 Usage
 
 To start the activity tracker, run the main script:
-python project.py
+    python project.py
 
 This will initiate the tracking service, which will run silently in the background. To view the activity logs, you can start the gui:
-python gui.py
+    python gui.py
 
 The gui gets the data from the database and displays your individual files with the total amount of time spent in each one.
 Using sqlite and using minimal minumal recourses this is a very lightweight program that you will not notice.
